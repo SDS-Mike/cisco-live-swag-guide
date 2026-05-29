@@ -1,313 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cisco Live 2026 — Swag, Raffle &amp; Giveaway Field Guide</title>
-<meta name="description" content="A field guide to the best booths, raffles, and giveaways at the World of Solutions, Cisco Live US 2026 (Mandalay Bay, Las Vegas, May 31–June 4). Confirmed-for-2026 items are sourced; prior-year items are clearly labeled.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CISCO LIVE 2026 // SWAG_RUNNER.exe</title>
+<meta name="description" content="Field guide to the best booths, raffles, and giveaways at the World of Solutions, Cisco Live US 2026 — Mandalay Bay, May 31–June 4. Confirmed-for-2026 items are sourced; prior-year items are clearly flagged.">
 <style>
-  :root{
-    --ink:#1b1c1f; --muted:#5b6370; --line:#e3e6eb; --bg:#f6f7f9; --card:#fff;
-    --cisco:#00bceb; --cisco-deep:#0d274d;
-    --good:#1a7f4b; --good-bg:#e6f4ec; --good-line:#bfe3cd;
-    --hist:#8a6100; --hist-bg:#fbf1d8; --hist-line:#ecd9a3;
-    --raffle:#7a2ea6; --raffle-bg:#f1e7f8;
-    --stop:#8a2b2b; --stop-bg:#f7e7e7;
-  }
-  *{box-sizing:border-box}
-  html{-webkit-text-size-adjust:100%; scroll-behavior:smooth}
-  body{margin:0; background:var(--bg); color:var(--ink);
-    font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
-  .wrap{max-width:940px; margin:0 auto; padding:0 18px 80px}
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;500;700&display=swap');
 
-  header.hero{background:linear-gradient(120deg,var(--cisco-deep),#10325f); color:#fff;
-    padding:42px 0 34px; margin-bottom:26px; border-bottom:4px solid var(--cisco);}
-  header.hero .wrap{padding-bottom:0}
-  .kicker{letter-spacing:.14em; text-transform:uppercase; font-size:12px; font-weight:700; color:var(--cisco); margin:0 0 8px}
-  h1{font-size:30px; line-height:1.15; margin:0 0 12px}
-  .meta{margin:0; color:#cdd8ea; font-size:15px}
-  .meta strong{color:#fff}
-  .updated{margin-top:14px; font-size:13px; color:#9fb2cf}
+:root{
+  --neon-cyan:#00f0ff; --neon-pink:#ff00a0; --neon-purple:#b026ff;
+  --neon-green:#39ff14; --neon-yellow:#fffb00;
+  --dark-bg:#0a0a12; --darker-bg:#05050a; --panel-bg:#12121f; --panel-border:#1f1f3a;
+  --txt:#e0e0ff; --muted:#8a8ac0;
+}
+*{margin:0; padding:0; box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Rajdhani',sans-serif; background:var(--dark-bg); color:var(--txt); line-height:1.6; overflow-x:hidden}
 
-  nav.toc{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 18px; margin:0 0 22px; font-size:14px}
-  nav.toc strong{display:block; font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin-bottom:8px}
-  nav.toc a{color:#0a66c2; text-decoration:none; margin-right:14px; white-space:nowrap; line-height:2}
-  nav.toc a:hover{text-decoration:underline}
+body::before{content:''; position:fixed; inset:0; z-index:0; pointer-events:none;
+  background-image:linear-gradient(rgba(0,240,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,240,255,.03) 1px,transparent 1px);
+  background-size:40px 40px;}
+.scanline{position:fixed; inset:0; z-index:1; pointer-events:none;
+  background:linear-gradient(rgba(0,0,0,0) 50%,rgba(0,240,255,.02) 50%); background-size:100% 4px;}
 
-  h2{font-size:22px; margin:40px 0 6px; display:flex; align-items:center; gap:10px; scroll-margin-top:14px}
-  h2 .num{font-size:13px; font-weight:700; color:#fff; background:var(--cisco-deep);
-    width:26px;height:26px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto}
-  h3.sub{font-size:17px; margin:24px 0 4px}
-  .lede{color:var(--muted); margin:0 0 14px}
+.container{position:relative; z-index:2; max-width:1100px; margin:0 auto; padding:20px 20px 80px}
 
-  .callout{border-radius:12px; padding:16px 18px; margin:18px 0; border:1px solid var(--line); background:var(--card)}
-  .callout.warn{background:var(--hist-bg); border-color:var(--hist-line)}
-  .callout.info{background:#eaf8fd; border-color:#bfe9f6}
-  .callout.stop{background:var(--stop-bg); border-color:#e3b9b9}
-  .callout h3{margin:0 0 6px; font-size:15px}
-  .callout p{margin:6px 0 0}
+/* Header */
+header{text-align:center; padding:56px 20px 36px; border-bottom:2px solid var(--neon-cyan); margin-bottom:14px}
+.glitch{font-family:'Orbitron',sans-serif; font-size:clamp(28px,6vw,60px); font-weight:900; text-transform:uppercase;
+  letter-spacing:2px; color:#fff; text-shadow:2px 2px 0 var(--neon-pink),-2px -2px 0 var(--neon-cyan);}
+.subtitle{font-family:'Share Tech Mono',monospace; color:var(--neon-green); font-size:clamp(12px,2vw,16px); margin-top:16px; letter-spacing:3px}
+.status-bar{display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin-top:22px; font-family:'Share Tech Mono',monospace; font-size:12px; color:var(--neon-cyan)}
+.status-bar span{border:1px solid var(--panel-border); padding:5px 12px; background:var(--panel-bg)}
+.reviewed{margin-top:16px; font-family:'Share Tech Mono',monospace; font-size:11px; color:var(--muted)}
 
-  .card{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px 20px; margin:14px 0}
-  .card.good{border-left:4px solid var(--good)}
-  .card h3{margin:0 0 4px; font-size:18px}
-  .card .where{font-size:13px; color:var(--muted); margin:0 0 8px}
-  .card p{margin:8px 0 0}
+/* TOC */
+nav.toc{margin:22px 0 8px; font-family:'Share Tech Mono',monospace; font-size:12px; text-align:center}
+nav.toc a{color:var(--neon-cyan); text-decoration:none; margin:0 8px; white-space:nowrap; line-height:2.2; border-bottom:1px solid transparent}
+nav.toc a:hover{border-bottom-color:var(--neon-cyan)}
 
-  ul.clean{margin:8px 0 0; padding-left:20px} ul.clean li{margin:5px 0}
-  ol.tips{margin:8px 0 0; padding-left:22px} ol.tips li{margin:7px 0}
+/* Sections */
+h2.section-title{font-family:'Orbitron',sans-serif; font-size:clamp(19px,4vw,30px); color:var(--neon-cyan);
+  margin:54px 0 6px; padding-left:16px; border-left:4px solid var(--neon-pink); text-transform:uppercase; letter-spacing:1px; scroll-margin-top:14px}
+.lede{color:var(--muted); margin:6px 0 18px; padding-left:16px; max-width:80ch}
+h3.sub{font-family:'Orbitron',sans-serif; color:#fff; font-size:16px; text-transform:uppercase; letter-spacing:1px; margin:30px 0 4px; padding-left:16px}
 
-  .src{font-size:13px; margin-top:10px}
-  .src a, a.link{color:#0a66c2; text-decoration:none; border-bottom:1px solid #cfe0f2}
-  .src a:hover, a.link:hover{border-bottom-color:#0a66c2}
+/* Callouts */
+.callout{border:1px solid var(--panel-border); border-left-width:4px; background:var(--panel-bg); border-radius:4px; padding:14px 18px; margin:18px 0; font-size:15px}
+.callout.info{border-left-color:var(--neon-cyan)}
+.callout.warn{border-left-color:var(--neon-yellow)}
+.callout.stop{border-left-color:var(--neon-pink)}
+.callout h4{font-family:'Orbitron',sans-serif; font-size:13px; text-transform:uppercase; letter-spacing:1px; color:#fff; margin-bottom:6px}
+.callout.warn h4{color:var(--neon-yellow)} .callout.stop h4{color:var(--neon-pink)} .callout.info h4{color:var(--neon-cyan)}
 
-  table{width:100%; border-collapse:collapse; background:var(--card); border:1px solid var(--line);
-    border-radius:12px; overflow:hidden; margin:12px 0; font-size:15px}
-  caption{caption-side:top; text-align:left; font-weight:700; padding:0 0 8px; font-size:16px}
-  th,td{padding:10px 12px; text-align:left; vertical-align:top; border-bottom:1px solid var(--line)}
-  th{background:#f0f2f5; font-size:12px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted)}
-  tr:last-child td{border-bottom:none}
-  td.k{font-weight:600; white-space:nowrap}
+/* Cards */
+.tier-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:18px; margin-top:8px}
+.card{background:var(--panel-bg); border:1px solid var(--panel-border); border-radius:4px; padding:18px 20px; position:relative; overflow:hidden; transition:all .25s ease}
+.card::before{content:''; position:absolute; top:0; left:0; width:100%; height:2px; background:linear-gradient(90deg,var(--neon-cyan),var(--neon-pink))}
+.card:hover{border-color:var(--neon-cyan); box-shadow:0 0 20px rgba(0,240,255,.25); transform:translateY(-3px)}
+.card h3{font-family:'Orbitron',sans-serif; color:#fff; font-size:17px; margin:6px 0 4px; line-height:1.25}
+.card .booth{font-family:'Share Tech Mono',monospace; color:var(--neon-yellow); font-size:12px; letter-spacing:1px; margin-bottom:8px}
+.card p{margin:8px 0 0; font-size:15px}
+.card p.entry strong{color:var(--neon-green)}
 
-  .badge{display:inline-block; font-size:11px; font-weight:700; padding:2px 8px; border-radius:999px; white-space:nowrap; text-transform:uppercase; letter-spacing:.03em}
-  .b-good{color:var(--good); background:var(--good-bg)}
-  .b-hist{color:var(--hist); background:var(--hist-bg)}
-  .b-raffle{color:var(--raffle); background:var(--raffle-bg)}
-  .b-stop{color:var(--stop); background:var(--stop-bg)}
-  .booth{font-variant-numeric:tabular-nums; font-weight:600}
+/* Badges */
+.badge{display:inline-block; font-family:'Share Tech Mono',monospace; font-size:10px; padding:3px 8px; border-radius:2px; text-transform:uppercase; letter-spacing:1px}
+.badge.confirmed{background:var(--neon-green); color:#000}
+.badge.historical{background:var(--neon-yellow); color:#000}
+.badge.raffle{background:var(--neon-pink); color:#000}
 
-  .legend{display:flex; flex-wrap:wrap; gap:8px 16px; margin:10px 0 4px; font-size:13px; color:var(--muted)}
-  .legend span{display:inline-flex; align-items:center; gap:6px}
+/* Source line */
+.src{font-family:'Share Tech Mono',monospace; font-size:12px; color:var(--muted); margin-top:12px}
+.src a, a.link{color:var(--neon-cyan); text-decoration:none; border-bottom:1px solid rgba(0,240,255,.4)}
+.src a:hover, a.link:hover{border-bottom-color:var(--neon-cyan)}
 
-  footer{margin-top:50px; border-top:1px solid var(--line); padding-top:20px; color:var(--muted); font-size:13px}
-  footer p{margin:8px 0}
-  .edit-note{background:#fff; border:1px dashed #b9c2d0; border-radius:12px; padding:18px 20px; margin:30px 0 0}
-  .edit-note h3{margin:0 0 6px; font-size:16px; color:var(--cisco-deep)}
-  .edit-note a{color:#0a66c2}
+/* Tables */
+table{width:100%; border-collapse:collapse; margin:14px 0; background:var(--panel-bg); font-size:14px}
+caption{caption-side:top; text-align:left; font-family:'Orbitron',sans-serif; font-size:13px; color:#fff; text-transform:uppercase; letter-spacing:1px; padding:0 0 8px 2px}
+th{background:var(--darker-bg); color:var(--neon-cyan); font-family:'Orbitron',sans-serif; font-size:11px; text-transform:uppercase; padding:11px 12px; text-align:left; border-bottom:2px solid var(--neon-cyan)}
+td{padding:11px 12px; border-bottom:1px solid var(--panel-border); vertical-align:top}
+tr:hover td{background:rgba(0,240,255,.05)}
+td.k{font-weight:700; color:#fff; white-space:nowrap}
+.loot-name{color:var(--neon-green); font-weight:700}
+.bnum{font-family:'Share Tech Mono',monospace; color:var(--neon-yellow); white-space:nowrap}
 
-  @media (max-width:560px){
-    h1{font-size:23px} table{font-size:14px} th,td{padding:8px 9px} td.k{white-space:normal}
-  }
-  @media print{
-    body{background:#fff} nav.toc{display:none}
-    header.hero{background:#0d274d !important; -webkit-print-color-adjust:exact; print-color-adjust:exact}
-    .badge,th,.card.good{-webkit-print-color-adjust:exact; print-color-adjust:exact}
-  }
+ul.clean{margin:6px 0 0; padding-left:34px} ul.clean li{margin:5px 0}
+ol.tips{margin:8px 0 0; padding-left:36px} ol.tips li{margin:8px 0}
+.legend{display:flex; flex-wrap:wrap; gap:10px 18px; padding-left:16px; margin:8px 0; font-family:'Share Tech Mono',monospace; font-size:12px; color:var(--muted); align-items:center}
+.marquee{margin:16px 0 0; padding-left:16px; font-size:15px}
+.marquee .loot-name{color:var(--neon-pink)}
+
+/* Edit note */
+.edit-note{margin-top:34px; border:1px dashed var(--neon-purple); border-radius:4px; padding:18px 20px; background:var(--panel-bg)}
+.edit-note h4{font-family:'Orbitron',sans-serif; font-size:14px; color:var(--neon-purple); text-transform:uppercase; letter-spacing:1px; margin-bottom:6px}
+
+footer{margin-top:50px; padding:28px 20px; border-top:2px solid var(--neon-pink); text-align:center;
+  font-family:'Share Tech Mono',monospace; font-size:12px; color:#6060a0; line-height:1.8}
+footer a{color:var(--neon-cyan)}
+footer .eol{color:var(--neon-pink); font-size:13px; letter-spacing:2px; margin-bottom:8px}
+
+@media print{
+  body{background:#fff; color:#111}
+  body::before,.scanline{display:none}
+  nav.toc{display:none}
+  .glitch{color:#0d274d; text-shadow:none}
+  .subtitle,.reviewed,.lede,.src,footer{color:#444}
+  h2.section-title,h3.sub,caption,th,.card h3{color:#0d274d}
+  .card,.callout,table,.edit-note{background:#fff; border-color:#ccc; box-shadow:none}
+  th{background:#eee}
+  .badge{-webkit-print-color-adjust:exact; print-color-adjust:exact}
+  a,.src a{color:#0a66c2}
+}
 </style>
 </head>
 <body>
+<div class="scanline"></div>
+<div class="container">
 
-<header class="hero">
-  <div class="wrap">
-    <p class="kicker">Field Guide · Sequel Data Systems</p>
-    <h1>Cisco Live 2026 — Swag, Raffle &amp; Giveaway Field Guide</h1>
-    <p class="meta"><strong>Cisco Live US 2026</strong> &middot; World of Solutions, Mandalay Bay Convention Center, Las Vegas, NV &middot; <strong>May 31 – June 4, 2026</strong></p>
-    <p class="updated">Last reviewed: May 29, 2026. A planning aid — not an official Cisco list.</p>
+<header>
+  <h1 class="glitch">Cisco Live 2026</h1>
+  <p class="subtitle">// SWAG_RUNNER.exe — THE LOOT EXTRACTION PROTOCOL</p>
+  <div class="status-bar">
+    <span>📍 MANDALAY BAY · LAS VEGAS</span>
+    <span>📅 MAY 31 – JUN 4</span>
+    <span>🎯 WORLD OF SOLUTIONS</span>
   </div>
+  <p class="reviewed">// last_review: 2026-05-29 · planning aid — not an official Cisco list · prepared by Sequel Data Systems</p>
 </header>
 
-<div class="wrap">
+<nav class="toc">
+  <a href="#headliners">HEADLINERS</a>
+  <a href="#timed">TIMED_DROPS</a>
+  <a href="#cisco">CISCO_GAMES</a>
+  <a href="#walkup">WALK-UP</a>
+  <a href="#prior">PRIOR_YEAR</a>
+  <a href="#tips">PRO_TIPS</a>
+  <a href="#parties">PARTIES</a>
+  <a href="#edits">REPORT_BUG</a>
+</nav>
 
-  <nav class="toc">
-    <strong>Jump to</strong>
-    <a href="#headliners">Headliner raffles</a>
-    <a href="#timed">Be-here-at-this-time</a>
-    <a href="#cisco-games">Cisco-run games</a>
-    <a href="#walkup">Walk-up circuit</a>
-    <a href="#prior">Prior-year playbook</a>
-    <a href="#tips">Pro tips</a>
-    <a href="#parties">Parties</a>
-    <a href="#edits">Spot an error?</a>
-  </nav>
+<div class="callout info">
+  <h4>// readme</h4>
+  <p><span class="badge confirmed">CONFIRMED</span> items (§1–4) are backed by a public source — the vendor's or Cisco's own Cisco Live 2026 page, linked inline. The <strong style="color:var(--neon-yellow)">PRIOR-YEAR</strong> section (§5) is from past shows and is <strong>not announced for 2026</strong> — labeled so nobody treats a guess as a promise. Best on-site tool: the <strong>Cisco Events App</strong> (live floor map + booth numbers + the Cisco Live Challenge). Most giveaways need a <strong>badge scan</strong> (lead capture) — expect follow-up email.</p>
+</div>
 
-  <div class="callout info">
-    <h3>How to read this guide</h3>
-    <p>Items in the <strong>Confirmed for 2026</strong> sections are backed by a public source (the vendor's or Cisco's own Cisco Live 2026 page), linked inline. The <strong>Prior-Year Playbook</strong> further down is drawn from past Cisco Lives and is <strong>not announced for 2026</strong> — labeled clearly so nobody treats a guess as a promise. The single best on-site tool is the <strong>Cisco Events App</strong>: it has the live floor map, booth numbers, and the Cisco Live Challenge. Most giveaways require a <strong>badge scan</strong> (lead capture) — expect follow-up email.</p>
-  </div>
+<!-- ===== HEADLINERS ===== -->
+<h2 class="section-title" id="headliners">// 01_Headliner_Raffles</h2>
+<p class="lede">The big-ticket prizes worth building your day around — each is published on the vendor's own Cisco Live 2026 page.</p>
+<div class="tier-grid">
 
-  <!-- ================= CONFIRMED ================= -->
-  <h2 id="headliners"><span class="num">1</span> The headliner raffles — confirmed for 2026</h2>
-  <p class="lede">The big-ticket prizes worth building your day around. The first three are published on each vendor's Cisco Live 2026 page; Variphy's Switch raffle is confirmed by the Sequel team.</p>
-
-  <div class="card good">
+  <div class="card">
+    <span class="badge confirmed">CONFIRMED</span>
     <h3>🎒 NVIDIA backpack — Jetson Orin Nano Super Dev Kit (~$250) + Marine Layer hoodie + Fellow mug</h3>
-    <p class="where">NVIDIA (Diamond), booth <span class="booth">#5420</span></p>
-    <p><strong>How to enter:</strong> Use the Cisco Events App and complete NVIDIA's booth AI experiences/sessions. Winners drawn during the show.</p>
-    <p class="src">Source: <a href="https://www.nvidia.com/en-us/events/cisco-live/" target="_blank" rel="noopener">nvidia.com/en-us/events/cisco-live</a></p>
+    <p class="booth">NVIDIA (Diamond) · BOOTH #5420</p>
+    <p class="entry"><strong>Enter:</strong> use the Cisco Events App, complete NVIDIA's booth AI experiences. Drawn during the show.</p>
+    <p class="src">SRC: <a href="https://www.nvidia.com/en-us/events/cisco-live/" target="_blank" rel="noopener">nvidia.com/en-us/events/cisco-live</a></p>
   </div>
 
-  <div class="card good">
+  <div class="card">
+    <span class="badge confirmed">CONFIRMED</span>
     <h3>🎮 Nintendo Switch 2 + exclusive swag bag</h3>
-    <p class="where">BlueCat (Gold), booth <span class="booth">#8409</span></p>
-    <p><strong>How to enter:</strong> Pre-book a BlueCat demo on their landing page <em>before</em> the show, then visit the booth to enter the drawing and grab the swag bag.</p>
-    <p class="src">Source: <a href="https://info.bluecatnetworks.com/event-cisco-live-las-vegas-2026.html" target="_blank" rel="noopener">info.bluecatnetworks.com — Cisco Live Las Vegas 2026</a></p>
+    <p class="booth">BlueCat (Gold) · BOOTH #8409</p>
+    <p class="entry"><strong>Enter:</strong> pre-book a BlueCat demo before the show, then visit the booth to enter the drawing + grab the swag bag.</p>
+    <p class="src">SRC: <a href="https://info.bluecatnetworks.com/event-cisco-live-las-vegas-2026.html" target="_blank" rel="noopener">info.bluecatnetworks.com — Cisco Live LV 2026</a></p>
   </div>
 
-  <div class="card good">
+  <div class="card">
+    <span class="badge confirmed">CONFIRMED</span>
+    <h3>🕶️ Ray-Ban Meta Smart Glasses (Gen 2)</h3>
+    <p class="booth">Variphy · SOLUTIONS VILLAGE KIOSK SV-32</p>
+    <p class="entry"><strong>Enter:</strong> get scanned by a Variphy team member at the kiosk (or after session WOSPAR-2010, Tue Jun 2, 2:30 PM). Drawn <strong>Wed Jun 3, 12:00 PM PT</strong> — need not be present. <strong>Bonus:</strong> 20-min qualified demo → $50 Amazon gift card.</p>
+    <p class="src">SRC: <a href="https://www.variphy.com/landing/cisco-live-2026" target="_blank" rel="noopener">variphy.com/landing/cisco-live-2026</a></p>
+  </div>
+
+  <div class="card">
+    <span class="badge confirmed">CONFIRMED</span>
     <h3>💻 Mac Mini + 1 month of Claude Max</h3>
-    <p class="where">Itential (Bronze), booth <span class="booth">#2609</span></p>
-    <p><strong>How to enter:</strong> Be at the booth for the <strong>Wed June 3, 4:00 PM</strong> drawing (must be present). Bonus: VibeOps Lounge sessions Mon–Wed and live spec-coding contests Tue &amp; Wed at noon.</p>
-    <p class="src">Source: <a href="https://www.itential.com/ciscolive-us/" target="_blank" rel="noopener">itential.com/ciscolive-us</a></p>
+    <p class="booth">Itential (Bronze) · BOOTH #2609</p>
+    <p class="entry"><strong>Enter:</strong> be at the booth for the <strong>Wed Jun 3, 4:00 PM</strong> drawing (must be present). Bonus: VibeOps Lounge + spec-coding contests Tue &amp; Wed at noon.</p>
+    <p class="src">SRC: <a href="https://www.itential.com/ciscolive-us/" target="_blank" rel="noopener">itential.com/ciscolive-us</a></p>
   </div>
 
-  <div class="card good">
-    <h3>🎮 Nintendo Switch raffle</h3>
-    <p class="where">Variphy, Collaboration Village kiosk <span class="booth">SV-32</span></p>
-    <p><strong>How to enter:</strong> Visit the kiosk to enter the drawing — and grab the "CDR Kitten" tee while you're there.</p>
-    <p class="src">Confirmed for 2026 by the Sequel team (no public vendor page linked yet).</p>
-  </div>
+</div>
 
-  <!-- ================= TIMED ================= -->
-  <h2 id="timed"><span class="num">2</span> "Be here at this exact time" — confirmed, must be present</h2>
-  <p class="lede">Set phone alarms. These are time-gated and presence-required.</p>
-  <table>
-    <thead><tr><th>Day</th><th>Time</th><th>Where</th><th>Prize</th></tr></thead>
-    <tbody>
-      <tr><td class="k">Daily</td><td>11 AM–12 PM</td><td>Cisco Community <span class="booth">#4231</span></td><td>"Wheel of Swag" — spin for pins / stickers / gear</td></tr>
-      <tr><td class="k">Daily</td><td>check booth</td><td>Cisco SMB &amp; Mid-Market <span class="booth">#3231</span></td><td>🧱 McLaren LEGO set — one given away every day</td></tr>
-      <tr><td class="k">Wed 6/3</td><td>4:00 PM</td><td>Itential <span class="booth">#2609</span></td><td>💻 Mac Mini + Claude Max (see above)</td></tr>
-      <tr><td class="k">Wed 6/3</td><td>all day</td><td>venue-wide</td><td>Cisco Spirit Day — wear blue/Cisco gear → "Cisco Live Cape" + leaderboard points</td></tr>
-    </tbody>
-  </table>
-  <p class="src">Sources: <a href="https://community.cisco.com/t5/cisco-live-event-blogs/cisco-community-at-ciscolive-las-vegas-2026/ba-p/5548062" target="_blank" rel="noopener">Cisco Community @ CL2026</a> · <a href="https://www.ciscolive.com/global/experience.html" target="_blank" rel="noopener">Cisco Live Experience</a></p>
+<!-- ===== TIMED ===== -->
+<h2 class="section-title" id="timed">// 02_Timed_Drops</h2>
+<p class="lede">Set phone alarms. Time-gated and presence-required.</p>
+<table>
+  <thead><tr><th>Day</th><th>Time</th><th>Where</th><th>Prize</th></tr></thead>
+  <tbody>
+    <tr><td class="k">Daily</td><td class="bnum">13:00–15:00</td><td>Cisco Community <span class="bnum">#4231</span></td><td><span class="loot-name">"Wheel of Swag"</span> — spin for pins / stickers / gear</td></tr>
+    <tr><td class="k">Daily</td><td class="bnum">check booth</td><td>Cisco SMB &amp; Mid-Market <span class="bnum">#3231</span></td><td>🧱 <span class="loot-name">McLaren LEGO set</span> — one given away every day</td></tr>
+    <tr><td class="k">Wed 6/3</td><td class="bnum">16:00</td><td>Itential <span class="bnum">#2609</span></td><td>💻 <span class="loot-name">Mac Mini + Claude Max</span> (see §1)</td></tr>
+    <tr><td class="k">Wed 6/3</td><td class="bnum">all day</td><td>venue-wide</td><td>Cisco Spirit Day — wear blue/Cisco gear → "Cisco Live Cape" + leaderboard points</td></tr>
+  </tbody>
+</table>
+<p class="src">SRC: <a href="https://community.cisco.com/t5/cisco-live-event-blogs/cisco-community-at-ciscolive-las-vegas-2026/ba-p/5548062" target="_blank" rel="noopener">Cisco Community @ CL2026</a> · <a href="https://www.ciscolive.com/global/experience.html" target="_blank" rel="noopener">Cisco Live Experience</a></p>
 
-  <!-- ================= CISCO GAMES ================= -->
-  <h2 id="cisco-games"><span class="num">3</span> Cisco-run games — any badge, no vendor relationship needed</h2>
-  <p class="lede">The most reliable points-and-prizes on the floor; Cisco runs these centrally.</p>
-  <table>
-    <thead><tr><th>Activity</th><th>Where</th><th>Prize / payoff</th></tr></thead>
-    <tbody>
-      <tr><td class="k">Cisco Live Challenge</td><td>Cisco Events App</td><td>Daily prizes + grand prize: a free pass to Cisco Live 2027</td></tr>
-      <tr><td class="k">Customer Heroes</td><td><span class="booth">#3031</span></td><td>Share a Cisco success story → $25 gift card + 400 app points <em>(easiest payoff on the floor)</em></td></tr>
-      <tr><td class="k">CLP Demo Pod</td><td>Learn with Cisco area</td><td>Get scanned → drawing for Cisco exam vouchers</td></tr>
-      <tr><td class="k">Cisco Modeling Labs</td><td>Learn with Cisco area</td><td>Get scanned → 50%-off code for everyone (guaranteed, not a raffle)</td></tr>
-      <tr><td class="k">Learn with Cisco Jeopardy!</td><td>Learn with Cisco area</td><td>Trivia for swag</td></tr>
-      <tr><td class="k">CX AI Sweepstakes</td><td>CX Connections Lounge</td><td>Enter for an "AI gaming prize package"</td></tr>
-      <tr><td class="k">DevNet Zone</td><td><span class="booth">#9300</span></td><td>Stickers + occasional apparel for completing hands-on labs</td></tr>
-    </tbody>
-  </table>
-  <p class="src">Sources: <a href="https://blogs.cisco.com/learning/evolve-your-career-the-learn-with-cisco-experience-at-cisco-live-2026" target="_blank" rel="noopener">Learn with Cisco @ CL2026</a> · <a href="https://blogs.cisco.com/customerexperience/cisco-live-2026-bringing-the-future-of-customer-experience-to-las-vegas" target="_blank" rel="noopener">Cisco CX @ CL2026</a> · <a href="https://www.ciscolive.com/global/experience.html" target="_blank" rel="noopener">Cisco Live Experience</a></p>
+<!-- ===== CISCO GAMES ===== -->
+<h2 class="section-title" id="cisco">// 03_Cisco_Run_Games</h2>
+<p class="lede">Most reliable points-and-prizes on the floor — any badge, no vendor relationship needed.</p>
+<table>
+  <thead><tr><th>Activity</th><th>Where</th><th>Prize / payoff</th></tr></thead>
+  <tbody>
+    <tr><td class="k">Cisco Live Challenge</td><td>Cisco Events App</td><td>Daily prizes + grand prize: <span class="loot-name">a free pass to Cisco Live 2027</span></td></tr>
+    <tr><td class="k">Customer Heroes</td><td class="bnum">#3031</td><td>Share a Cisco success story → <span class="loot-name">$25 gift card</span> + 400 app points <em>(easiest payoff on the floor)</em></td></tr>
+    <tr><td class="k">CLP Demo Pod</td><td>Learn with Cisco</td><td>Get scanned → drawing for <span class="loot-name">Cisco exam vouchers</span></td></tr>
+    <tr><td class="k">Cisco Modeling Labs</td><td>Learn with Cisco</td><td>Get scanned → <span class="loot-name">50%-off code for everyone</span> (guaranteed, not a raffle)</td></tr>
+    <tr><td class="k">Learn with Cisco Jeopardy!</td><td>Learn with Cisco</td><td>Trivia for swag</td></tr>
+    <tr><td class="k">CX AI Sweepstakes</td><td>CX Connections Lounge</td><td>Enter for an "AI gaming prize package"</td></tr>
+    <tr><td class="k">DevNet Zone</td><td class="bnum">#9300</td><td>Stickers + occasional apparel for completing hands-on labs</td></tr>
+  </tbody>
+</table>
+<p class="src">SRC: <a href="https://blogs.cisco.com/learning/evolve-your-career-the-learn-with-cisco-experience-at-cisco-live-2026" target="_blank" rel="noopener">Learn with Cisco @ CL2026</a> · <a href="https://blogs.cisco.com/customerexperience/cisco-live-2026-bringing-the-future-of-customer-experience-to-las-vegas" target="_blank" rel="noopener">Cisco CX @ CL2026</a> · <a href="https://www.ciscolive.com/global/experience.html" target="_blank" rel="noopener">Cisco Live Experience</a></p>
+<p class="marquee">🎤 <strong>Marquee night (not a giveaway):</strong> <span class="loot-name">Cisco Live Celebration</span> — Wed Jun 3, 7:30–11 PM, Allegiant Stadium, <strong>Maroon 5 + The Chainsmokers</strong>. Included with a Full Conference pass.</p>
 
-  <p style="margin-top:14px">🎤 <strong>Marquee night (not a giveaway):</strong> the <strong>Cisco Live Celebration</strong> — Wed June 3, 7:30–11 PM, Allegiant Stadium, <strong>Maroon 5 + The Chainsmokers</strong>. Included with a Full Conference pass.</p>
+<!-- ===== WALK-UP ===== -->
+<h2 class="section-title" id="walkup">// 04_Walk-Up_Circuit</h2>
+<p class="lede">No appointment — just grab. Let the app map sequence the booth numbers into one loop.</p>
+<div class="tier-grid">
 
-  <!-- ================= WALK-UP ================= -->
-  <h2 id="walkup"><span class="num">4</span> The walk-up circuit — confirmed stops</h2>
-  <p class="lede">No appointment — just grab. Let the app map sequence the booth numbers into one loop.</p>
-
-  <div class="card good">
+  <div class="card">
+    <span class="badge confirmed">CONFIRMED</span>
     <h3>🐾 Splunk — the densest swag-and-experience stop</h3>
-    <p class="where">First-party (Cisco-owned), in the World of Solutions — not on the sponsor roster, easy to miss</p>
+    <p class="booth">First-party (Cisco-owned) · WORLD OF SOLUTIONS</p>
     <ul class="clean">
-      <li><strong>The Cisco Store</strong> — official branded-gear shop; this is where the best Cisco swag lives.</li>
-      <li><strong>Healing Hounds</strong> — therapy-dog lounge with dog-friendly swag.</li>
-      <li><strong>Splunk Arcade + KubeDoom</strong> — walk-in capture-the-flag arcade games, plus demo stations.</li>
+      <li><span class="loot-name">Cisco Store</span> — official branded-gear shop; the best Cisco swag lives here.</li>
+      <li><span class="loot-name">Healing Hounds</span> — therapy-dog lounge with dog-friendly swag.</li>
+      <li><span class="loot-name">Splunk Arcade + KubeDoom</span> — walk-in capture-the-flag games + demo stations.</li>
     </ul>
-    <p class="src">Source: <a href="https://www.splunk.com/en_us/blog/platform/cisco-live-2026-splunk-attendee-guide.html" target="_blank" rel="noopener">Splunk — Cisco Live 2026 attendee guide</a></p>
+    <p class="src">SRC: <a href="https://www.splunk.com/en_us/blog/platform/cisco-live-2026-splunk-attendee-guide.html" target="_blank" rel="noopener">Splunk — Cisco Live 2026 attendee guide</a></p>
   </div>
 
-  <div class="card good">
+  <div class="card">
+    <span class="badge confirmed">CONFIRMED</span>
     <h3>🎯 AlgoSec — "pick your number" booth game</h3>
-    <p class="where">AlgoSec (Bronze), booth <span class="booth">#2209</span></p>
+    <p class="booth">AlgoSec (Bronze) · BOOTH #2209</p>
     <p>Interactive booth game around firewall rule cleanup. Prize not publicly named, but it's a real engagement mechanic — worth a stop.</p>
-    <p class="src">Source: <a href="https://www.algosec.com/lp/ciscolive2026" target="_blank" rel="noopener">algosec.com/lp/ciscolive2026</a></p>
+    <p class="src">SRC: <a href="https://www.algosec.com/lp/ciscolive2026" target="_blank" rel="noopener">algosec.com/lp/ciscolive2026</a></p>
   </div>
 
-  <div class="callout stop">
-    <h3>⛔ Don't make a trip for Gigamon</h3>
-    <p>Gigamon historically had some of the best raffles at the show (Apple Vision Pro, Apple Watch) but is <strong>not exhibiting in 2026</strong> — confirmed absent from the official exhibitor catalog (checked 2026-05-28). Noted here only so nobody goes looking.</p>
-  </div>
+</div>
 
-  <!-- ================= PRIOR YEAR ================= -->
-  <h2 id="prior"><span class="num">5</span> Prior-year playbook — <em>not</em> confirmed for 2026</h2>
-  <div class="callout warn">
-    <h3>⚠ Read before using this section</h3>
-    <p>Every booth below handed out something good at a <strong>recent</strong> Cisco Live, but <strong>none of it is announced for 2026 yet.</strong> Generous last year ≠ advertised this year — vendors often confirm in the final 48 hours. Treat this as a "swing by and ask" list, not a promise. Re-check the vendor's LinkedIn/X before doors, and just ask at the booth: <em>"Are you running any drawings or giveaways this week?"</em></p>
-  </div>
+<div class="callout stop">
+  <h4>⛔ skip — gigamon not attending</h4>
+  <p>Gigamon historically had some of the best raffles (Apple Vision Pro, Apple Watch) but is <strong>not exhibiting in 2026</strong> — confirmed absent from the official exhibitor catalog (checked 2026-05-28). Noted only so nobody goes looking.</p>
+</div>
 
-  <h3 class="sub">🎟️ Prior-year raffles &amp; drawings — must be present to win</h3>
-  <p class="lede">Enter (often via a demo or scan), then be at the booth for the draw. Confirm timing in the Cisco Events App on arrival.</p>
-  <table>
-    <thead><tr><th>Vendor</th><th>Booth</th><th>Prior prize</th><th>How to enter</th></tr></thead>
-    <tbody>
-      <tr><td class="k">Opengear</td><td class="booth">#5023</td><td>LEGO set (Iron Man, '24)</td><td>Scan QR → ~4 PM daily draw</td></tr>
-      <tr><td class="k">Selector AI</td><td class="booth">#4015</td><td>A Mac Mini per day + graffiti water bottles ('25)</td><td>Daily draw at booth</td></tr>
-      <tr><td class="k">Wyebot</td><td class="booth">#8803</td><td>Meta Quest 3s + custom Minifigs</td><td>Book a 10-min demo (Cisco blog notes "giveaways + swag" for '26)</td></tr>
-      <tr><td class="k">Plixer</td><td class="booth">#3319</td><td>Light-up "NetFlow Knights" sword</td><td>Sit a 5-min Scrutinizer demo → end-of-day raffle</td></tr>
-      <tr><td class="k">ElastiFlow</td><td class="booth">#3624</td><td>Meta Quest 3 ('24)</td><td>Book &amp; complete a meeting → final-day draw</td></tr>
-      <tr><td class="k">Red Hat</td><td class="booth">#9011</td><td>Pixel Buds raffle + "many in-booth giveaways"</td><td>Ansible hands-on labs; ask at booth</td></tr>
-      <tr><td class="k">Alkira</td><td class="booth">#2207</td><td>Daily prize draws (ran at EMEA '26)</td><td>Visit the stand</td></tr>
-      <tr><td class="k">Pure Storage / Everpure</td><td class="booth">#2218</td><td>Raffle + coffee ('25)</td><td>Ask at booth</td></tr>
-      <tr><td class="k">Cohesity</td><td class="booth">SV-14</td><td>Booth raffle (AirPods Pro '23; ~$245 prize '24)</td><td>Enter at kiosk; present ~4 PM</td></tr>
-      <tr><td class="k">Akkadian Labs</td><td class="booth">SV-30</td><td>Themed raffle (LEGO Millennium Falcon + lightsabers, '23)</td><td>Enter at kiosk</td></tr>
-      <tr><td class="k">Singlewire</td><td class="booth">SV-22</td><td>Daily drawings (Oculus, a helicopter ride in past years)</td><td>Enter at kiosk</td></tr>
-    </tbody>
-  </table>
+<!-- ===== PRIOR YEAR ===== -->
+<h2 class="section-title" id="prior">// 05_Prior_Year_Playbook</h2>
+<div class="callout warn">
+  <h4>⚠ not confirmed for 2026 — read first</h4>
+  <p>Every booth below handed out something good at a <strong>recent</strong> Cisco Live, but <strong>none of it is announced for 2026 yet.</strong> Generous last year ≠ advertised this year — vendors often confirm in the final 48 hours. Treat as a "swing by and ask" list. Re-check the vendor's LinkedIn/X before doors, and just ask: <em>"Are you running any drawings or giveaways this week?"</em></p>
+</div>
 
-  <h3 class="sub">🎁 Prior-year walk-up swag — grab it, no drawing</h3>
-  <p class="lede">Just stop by. Go early for apparel; it never hurts to ask if there's a quiet scan-to-win running too.</p>
-  <table>
-    <thead><tr><th>Vendor</th><th>Booth</th><th>Prior handout</th></tr></thead>
-    <tbody>
-      <tr><td class="k">NetBox Labs</td><td class="booth">#3324</td><td>"NetBox Hero" tee — sold out fast at CL'24, go early</td></tr>
-      <tr><td class="k">China Telecom Americas</td><td class="booth">#3605</td><td>Panda plush 🐼 (recurring handout)</td></tr>
-      <tr><td class="k">GNX</td><td class="booth">#4306</td><td>"GNX Arcade" — beat-your-score booth game</td></tr>
-      <tr><td class="k">Niagara Networks</td><td class="booth">#8506</td><td>"Wheel of swag" — walk up &amp; spin</td></tr>
-      <tr><td class="k">cPacket</td><td class="booth">#2214</td><td>"Prizes" ('24) — ask what's running</td></tr>
-      <tr><td class="k">Cygna Labs</td><td class="booth">#3316</td><td>A "surprise" (teased at EMEA '26)</td></tr>
-      <tr><td class="k">ThreatLocker</td><td class="booth">SV-11</td><td>"Cyber Hero swag store" — branded handouts</td></tr>
-    </tbody>
-  </table>
-  <p class="src">Prior-year items compiled from a per-vendor web/social sweep (2026-05-28). Vendor pages, where live, are the underlying sources — confirm each in the Cisco Events App on arrival.</p>
+<div class="legend">
+  <span><span class="badge raffle">RAFFLE</span> drawing — must be present / enter to win</span>
+  <span><span class="badge historical">WALK-UP</span> grab it, no drawing</span>
+</div>
 
-  <!-- ================= TIPS ================= -->
-  <h2 id="tips"><span class="num">6</span> Pro tips</h2>
-  <ol class="tips">
-    <li><strong>Install the Cisco Events App first.</strong> It's the floor map, the booth numbers, the NVIDIA backpack entry, and the Cisco Live Challenge — nothing else works without it.</li>
-    <li><strong>Pre-book demos before you fly.</strong> BlueCat (Switch 2), Wyebot (Quest), ElastiFlow (Quest) all gate entry on a booked demo — qualify before you land.</li>
-    <li><strong>Badge scan is the price.</strong> Almost every giveaway is a lead-capture scan — accept the follow-up emails.</li>
-    <li><strong>Hit the time-gated prizes on the clock.</strong> The Mac Mini, the daily LEGO, and most raffles are "must be present."</li>
-    <li><strong>Go early in the week for apparel.</strong> Popular tees (NetBox Hero) and L/XL sizes run out by mid-week.</li>
-    <li><strong>Ask at every booth.</strong> Most Bronze/Copper booths run quiet scan-to-win contests they never publish.</li>
-    <li><strong>Bring a packable tote.</strong> You may be hauling a Switch, a LEGO set, and shirts home.</li>
-  </ol>
+<h3 class="sub"><span class="badge raffle">RAFFLE</span> &nbsp;Prior-year raffles &amp; drawings — must be present to win</h3>
+<p class="lede">Enter (often via a demo or scan), then be at the booth for the draw. Confirm timing in the Cisco Events App on arrival.</p>
+<table>
+  <thead><tr><th>Vendor</th><th>Booth</th><th>Prior prize</th><th>How to enter</th></tr></thead>
+  <tbody>
+    <tr><td class="k">Opengear</td><td class="bnum">#5023</td><td>LEGO set (Iron Man, '24)</td><td>Scan QR → ~4 PM daily draw</td></tr>
+    <tr><td class="k">Selector AI</td><td class="bnum">#4015</td><td>A Mac Mini per day + graffiti water bottles ('25)</td><td>Daily draw at booth</td></tr>
+    <tr><td class="k">Wyebot</td><td class="bnum">#8803</td><td>Meta Quest 3s + custom Minifigs</td><td>Book a 10-min demo (Cisco blog notes "giveaways + swag" for '26)</td></tr>
+    <tr><td class="k">Plixer</td><td class="bnum">#3319</td><td>Light-up "NetFlow Knights" sword</td><td>Sit a 5-min Scrutinizer demo → end-of-day raffle</td></tr>
+    <tr><td class="k">ElastiFlow</td><td class="bnum">#3624</td><td>Meta Quest 3 ('24)</td><td>Book &amp; complete a meeting → final-day draw</td></tr>
+    <tr><td class="k">Red Hat</td><td class="bnum">#9011</td><td>Pixel Buds raffle + "many in-booth giveaways"</td><td>Ansible hands-on labs; ask at booth</td></tr>
+    <tr><td class="k">Alkira</td><td class="bnum">#2207</td><td>Daily prize draws (ran at EMEA '26)</td><td>Visit the stand</td></tr>
+    <tr><td class="k">Pure Storage / Everpure</td><td class="bnum">#2218</td><td>Raffle + coffee ('25)</td><td>Ask at booth</td></tr>
+    <tr><td class="k">Cohesity</td><td class="bnum">SV-14</td><td>Booth raffle (AirPods Pro '23; ~$245 prize '24)</td><td>Enter at kiosk; present ~4 PM</td></tr>
+    <tr><td class="k">Akkadian Labs</td><td class="bnum">SV-30</td><td>Themed raffle (LEGO Millennium Falcon + lightsabers, '23)</td><td>Enter at kiosk</td></tr>
+    <tr><td class="k">Singlewire</td><td class="bnum">SV-22</td><td>Daily drawings (Oculus, a helicopter ride in past years)</td><td>Enter at kiosk</td></tr>
+  </tbody>
+</table>
 
-  <!-- ================= PARTIES ================= -->
-  <h2 id="parties"><span class="num">7</span> Parties &amp; client dinners</h2>
-  <p class="lede">Confirmed via <a class="link" href="https://conferenceparties.com/ciscolive2026/" target="_blank" rel="noopener">conferenceparties.com/ciscolive2026</a> (refreshes daily — RSVP links there). Most are RSVP/invite-gated; register early.</p>
+<h3 class="sub"><span class="badge historical">WALK-UP</span> &nbsp;Prior-year walk-up swag — grab it, no drawing</h3>
+<p class="lede">Just stop by. Go early for apparel; it never hurts to ask if there's a quiet scan-to-win running too.</p>
+<table>
+  <thead><tr><th>Vendor</th><th>Booth</th><th>Prior handout</th></tr></thead>
+  <tbody>
+    <tr><td class="k">NetBox Labs</td><td class="bnum">#3324</td><td>"NetBox Hero" tee — sold out fast at CL'24, go early</td></tr>
+    <tr><td class="k">China Telecom Americas</td><td class="bnum">#3605</td><td>Panda plush 🐼 (recurring handout)</td></tr>
+    <tr><td class="k">GNX</td><td class="bnum">#4306</td><td>"GNX Arcade" — beat-your-score booth game</td></tr>
+    <tr><td class="k">Niagara Networks</td><td class="bnum">#8506</td><td>"Wheel of swag" — walk up &amp; spin</td></tr>
+    <tr><td class="k">cPacket</td><td class="bnum">#2214</td><td>"Prizes" ('24) — ask what's running</td></tr>
+    <tr><td class="k">Cygna Labs</td><td class="bnum">#3316</td><td>A "surprise" (teased at EMEA '26)</td></tr>
+    <tr><td class="k">ThreatLocker</td><td class="bnum">SV-11</td><td>"Cyber Hero swag store" — branded handouts</td></tr>
+  </tbody>
+</table>
+<p class="src">// prior-year items compiled from a per-vendor web/social sweep (2026-05-28). Vendor pages, where live, are the underlying sources — confirm each in the Cisco Events App on arrival.</p>
 
-  <p style="margin:6px 0 0"><strong>Marquee — everyone goes:</strong> Cisco Live Celebration, Wed June 3, 7:30–11 PM, Allegiant Stadium — Maroon 5 + The Chainsmokers (Full Conference pass).</p>
-  <p style="margin:8px 0 0"><strong>Invite-only client dinners</strong> (ask your rep / RSVP early): <strong>WWT Customer Dinner</strong> — Mon June 1, 8:30 PM, Caramá by Wolfgang Puck (Mandalay Bay) · <strong>Itential + Selector Dinner</strong> — Tue June 2, 6:30–8:30 PM, Border Grill (Mandalay Bay).</p>
+<!-- ===== TIPS ===== -->
+<h2 class="section-title" id="tips">// 06_Pro_Tips</h2>
+<ol class="tips">
+  <li><strong>Install the Cisco Events App first.</strong> Floor map, booth numbers, the NVIDIA backpack entry, the Cisco Live Challenge — nothing else works without it.</li>
+  <li><strong>Pre-book demos before you fly.</strong> BlueCat (Switch 2), Variphy (Ray-Ban Meta), Wyebot (Quest), ElastiFlow (Quest) gate entry on a booked demo/scan — qualify before you land.</li>
+  <li><strong>Badge scan is the price.</strong> Almost every giveaway is a lead-capture scan — accept the follow-up emails.</li>
+  <li><strong>Hit the timed drops on the clock.</strong> The Mac Mini, the daily LEGO, and most raffles are "must be present."</li>
+  <li><strong>Go early for apparel.</strong> Popular tees (NetBox Hero) and L/XL sizes run out by mid-week.</li>
+  <li><strong>Ask at every booth.</strong> Most Bronze/Copper booths run quiet scan-to-win contests they never publish.</li>
+  <li><strong>Bring a packable tote.</strong> You may be hauling a Switch, glasses, a LEGO set, and shirts home.</li>
+</ol>
 
-  <table>
-    <caption>Vendor happy hours &amp; receptions</caption>
-    <thead><tr><th>When</th><th>Event</th><th>Time</th><th>Venue</th></tr></thead>
-    <tbody>
-      <tr><td class="k">Sun 5/31</td><td>7Signal Happy Hour</td><td>6–8 PM</td><td>Skyfall Bar &amp; Lounge, Mandalay Bay</td></tr>
-      <tr><td class="k">Mon 6/1</td><td>Cohesity Uncorked: Cyber, Cloud &amp; Cocktails</td><td>5:30–7:30 PM</td><td>Rhythm &amp; Riffs Lounge, Mandalay Bay</td></tr>
-      <tr><td class="k">Mon 6/1</td><td>Gatsby Night (Gruve, Supervity, Fleak.ai, Rafay)</td><td>5:30–8:30 PM</td><td>Address on RSVP</td></tr>
-      <tr><td class="k">Mon 6/1</td><td>Megaport Community Social</td><td>6:30–8:30 PM</td><td>Skyfall Bar &amp; Lounge, Mandalay Bay</td></tr>
-      <tr><td class="k">Mon 6/1</td><td>Presidio Reception</td><td>8 PM+</td><td>Tailgate Beach Club, Mandalay Bay</td></tr>
-      <tr><td class="k">Tue 6/2</td><td>Pellera Happy Hour</td><td>5–7 PM</td><td>Rhythm &amp; Riffs Upper Gazebo, Mandalay Bay</td></tr>
-      <tr><td class="k">Tue 6/2</td><td>TD-K &amp; Friends Celebration</td><td>5:30–7:30 PM</td><td>Flanker Kitchen, Mandalay Bay</td></tr>
-      <tr><td class="k">Tue 6/2</td><td>MongoDB, LangChain &amp; Factory Happy Hour</td><td>5:30–7:30 PM</td><td>Beauty &amp; Essex, The Cosmopolitan</td></tr>
-      <tr><td class="k">Tue 6/2</td><td>Everpure &amp; Cisco "Level Up" (Pure Storage)</td><td>6–8 PM</td><td>Play Playground, Luxor</td></tr>
-      <tr><td class="k">Tue 6/2</td><td>Red Hat &amp; Partners Innovation After Hours</td><td>6:30–8:30 PM</td><td>Libertine Social, Mandalay Bay</td></tr>
-      <tr><td class="k">Tue 6/2</td><td>Lightning AI Pit Stop Pours</td><td>6:30–9:30 PM</td><td>Address on RSVP</td></tr>
-      <tr><td class="k">Tue 6/2</td><td>Myriad360, DDN &amp; NetBox Labs Reception</td><td>7–9 PM</td><td>Citizens Kitchen &amp; Bar, Mandalay Bay</td></tr>
-      <tr><td class="k">Wed 6/3</td><td>Greyson Technologies Pre-Party Happy Hour</td><td>5–7 PM</td><td>1923 Prohibition Bar, Mandalay Bay</td></tr>
-    </tbody>
-  </table>
+<!-- ===== PARTIES ===== -->
+<h2 class="section-title" id="parties">// 07_After_Hours</h2>
+<p class="lede">Confirmed via <a class="link" href="https://conferenceparties.com/ciscolive2026/" target="_blank" rel="noopener">conferenceparties.com/ciscolive2026</a> (refreshes daily — RSVP links there). Most are RSVP/invite-gated; register early.</p>
+<p class="marquee"><strong>Marquee:</strong> <span class="loot-name">Cisco Live Celebration</span> — Wed Jun 3, 7:30–11 PM, Allegiant Stadium — Maroon 5 + The Chainsmokers (Full Conference pass).</p>
+<p class="marquee"><strong>Invite-only client dinners</strong> (ask your rep / RSVP early): <strong>WWT Customer Dinner</strong> — Mon Jun 1, 8:30 PM, Caramá by Wolfgang Puck (Mandalay Bay) · <strong>Itential + Selector Dinner</strong> — Tue Jun 2, 6:30–8:30 PM, Border Grill (Mandalay Bay).</p>
+<table>
+  <caption>Vendor happy hours &amp; receptions</caption>
+  <thead><tr><th>When</th><th>Event</th><th>Time</th><th>Venue</th></tr></thead>
+  <tbody>
+    <tr><td class="k">Sun 5/31</td><td>7Signal Happy Hour</td><td class="bnum">18:00–20:00</td><td>Skyfall Bar &amp; Lounge, Mandalay Bay</td></tr>
+    <tr><td class="k">Mon 6/1</td><td>Cohesity Uncorked: Cyber, Cloud &amp; Cocktails</td><td class="bnum">17:30–19:30</td><td>Rhythm &amp; Riffs Lounge, Mandalay Bay</td></tr>
+    <tr><td class="k">Mon 6/1</td><td>Gatsby Night (Gruve, Supervity, Fleak.ai, Rafay)</td><td class="bnum">17:30–20:30</td><td>Address on RSVP</td></tr>
+    <tr><td class="k">Mon 6/1</td><td>Megaport Community Social</td><td class="bnum">18:30–20:30</td><td>Skyfall Bar &amp; Lounge, Mandalay Bay</td></tr>
+    <tr><td class="k">Mon 6/1</td><td>Presidio Reception</td><td class="bnum">20:00+</td><td>Tailgate Beach Club, Mandalay Bay</td></tr>
+    <tr><td class="k">Tue 6/2</td><td>Pellera Happy Hour</td><td class="bnum">17:00–19:00</td><td>Rhythm &amp; Riffs Upper Gazebo, Mandalay Bay</td></tr>
+    <tr><td class="k">Tue 6/2</td><td>TD-K &amp; Friends Celebration</td><td class="bnum">17:30–19:30</td><td>Flanker Kitchen, Mandalay Bay</td></tr>
+    <tr><td class="k">Tue 6/2</td><td>MongoDB, LangChain &amp; Factory Happy Hour</td><td class="bnum">17:30–19:30</td><td>Beauty &amp; Essex, The Cosmopolitan</td></tr>
+    <tr><td class="k">Tue 6/2</td><td>Everpure &amp; Cisco "Level Up" (Pure Storage)</td><td class="bnum">18:00–20:00</td><td>Play Playground, Luxor</td></tr>
+    <tr><td class="k">Tue 6/2</td><td>Red Hat &amp; Partners Innovation After Hours</td><td class="bnum">18:30–20:30</td><td>Libertine Social, Mandalay Bay</td></tr>
+    <tr><td class="k">Tue 6/2</td><td>Lightning AI Pit Stop Pours</td><td class="bnum">18:30–21:30</td><td>Address on RSVP</td></tr>
+    <tr><td class="k">Tue 6/2</td><td>Myriad360, DDN &amp; NetBox Labs Reception</td><td class="bnum">19:00–21:00</td><td>Citizens Kitchen &amp; Bar, Mandalay Bay</td></tr>
+    <tr><td class="k">Wed 6/3</td><td>Greyson Technologies Pre-Party Happy Hour</td><td class="bnum">17:00–19:00</td><td>1923 Prohibition Bar, Mandalay Bay</td></tr>
+  </tbody>
+</table>
 
-  <!-- ================= EDIT NOTE ================= -->
-  <div class="edit-note" id="edits">
-    <h3>See something wrong or out of date?</h3>
-    <p>This is a living document. Vendor giveaways, raffle rules, and booth numbers change every year, and some confirm only in the final days before the show. If you have an on-site correction, a missing booth, or a source for any prior-year item, please flag it so we can fix it and (where verified) promote it into the Confirmed sections.</p>
-    <p>Send corrections to <a href="mailto:Daniel.Pirek@sequeldata.com"><strong>Daniel Pirek</strong></a>.</p>
-  </div>
+<!-- ===== EDIT NOTE ===== -->
+<div class="edit-note" id="edits">
+  <h4>// see_something_wrong?</h4>
+  <p>This is a living document. Vendor giveaways, raffle rules, and booth numbers change every year, and some confirm only in the final days before the show. If you have an on-site correction, a missing booth, or a source for any prior-year item, please flag it so we can fix it and (where verified) promote it into the confirmed sections.</p>
+  <p>Send corrections to <a href="mailto:daniel.pirek@sequeldata.com?subject=Cisco%20Live%202026%20Swag%20Guide%20correction"><strong>enable15</strong></a> — or just reply to the email this guide was shared from.</p>
+</div>
 
-  <footer>
-    <p><strong>Confidence labels:</strong> items in §1–4 are <em>Confirmed for 2026</em> with a public source linked inline. Prior-year items in §5 (raffles and walk-up swag) ran at a recent Cisco Live but are <strong>not</strong> announced for 2026 — verify on-site. No insider or non-public information was used; everything is from public vendor/Cisco pages or general show patterns.</p>
-    <p>Event facts (dates, venue, World of Solutions) per the <a href="https://www.ciscolive.com/global.html" target="_blank" rel="noopener">official Cisco Live 2026 site</a> and <a href="https://www.ciscolive.com/global/attend.html" target="_blank" rel="noopener">Attend page</a>. Compiled by Sequel Data Systems as a planning aid — not affiliated with or endorsed by Cisco. Verify everything in the Cisco Events App on arrival. Last reviewed May 29, 2026.</p>
-  </footer>
+<footer>
+  <p class="eol">// END_OF_LINE — CISCO LIVE 2026 SWAG RUNNER</p>
+  <p>CONFIRMED items (§1–4) carry a public source linked inline. PRIOR-YEAR items (§5) ran at a recent Cisco Live but are NOT announced for 2026 — verify on-site. No insider or non-public info used.</p>
+  <p>Event facts per the <a href="https://www.ciscolive.com/global.html" target="_blank" rel="noopener">official Cisco Live 2026 site</a> &amp; <a href="https://www.ciscolive.com/global/attend.html" target="_blank" rel="noopener">Attend page</a>. Compiled by Sequel Data Systems as a planning aid — not affiliated with or endorsed by Cisco. Verify everything in the Cisco Events App on arrival. // last_review 2026-05-29</p>
+</footer>
 
 </div>
 </body>
